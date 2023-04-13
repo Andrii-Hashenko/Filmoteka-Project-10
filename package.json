@@ -1,11 +1,11 @@
 {
-  "name": "parcel-project-template",
+  "name": "Filmoteka-Project-10",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://goitacademy.github.io/parcel-project-template",
+  "homepage": "https://Andrii-Hashenko.github.io/Filmoteka-Project-10",
   "scripts": {
-    "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "start": "parcel src/*.html --open",
+    "build": "parcel build src/*.html --public-url /Filmoteka-Project-10/"
   },
   "repository": {
     "type": "git",
