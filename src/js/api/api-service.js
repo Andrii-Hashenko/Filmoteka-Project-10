@@ -12,32 +12,32 @@ export default {
             console.error('Smth wrong with api get full trends' + error);
         }
     },
-};
-
-async fetchMovieSearcher(text, page) {
-    try {
-        const { data } = await axios.get (
-`${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`
-        );
-        return data;
-    }
-catch (error) {
-    console.error('Smth wrong with api search fetch' + error);
 }
 
-};
+//     async fetchMovieSearcher(text, page) {
+//     try {
+//         const { data } = await axios.get (
+// `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`
+//         );
+//         return data;
+//     }
+// catch (error) {
+//     console.error('Smth wrong with api search fetch' + error);
+// }
 
-async getMovieById(id) {
-    try {
-        const { data } = await axios.get (
-`${ID_URL}${id}?api_key=${API_KEY}`
-        );
-        const result = {
+// };
+
+// async getMovieById(id) {
+//     try {
+//         const { data } = await axios.get (
+// `${ID_URL}${id}?api_key=${API_KEY}`
+//         );
+//         const result = {
            
-        }
-    }
-catch (error) {
-    console.error('Smth wrong with api ID fetch' + error);
-}
+//         }
+//     }
+// catch (error) {
+//     console.error('Smth wrong with api ID fetch' + error);
+// }
 
-};
+// };
