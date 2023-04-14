@@ -1,0 +1,1 @@
+//const SEARCH_URL = '${BASE_URL}/search/movi';
