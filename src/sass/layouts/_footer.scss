@@ -18,9 +18,12 @@
 
 .copyright {
   display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
     display: inline-block;
+    margin: 0;
   }
 }
 
@@ -30,7 +33,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  display: inline-block;
+  display: flex;
   align-items: center;
   text-align: center;
 
@@ -42,6 +45,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    display: inline-block;
   }
 }
 
@@ -56,36 +60,37 @@
 }
 
 .footer-svg {
-  margin-right: 10px;
-  margin-left: 10px;
-  animation: heartBeat heartbeat 1s infinite;
+  // margin-right: 10px;
+  // margin-left: 10px;
+  animation: heartbeat 1s infinite;
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0.8);
+    }
+
+    20% {
+      transform: scale(0.9);
+    }
+
+    40% {
+      transform: scale(0.8);
+    }
+
+    60% {
+      transform: scale(0.9);
+    }
+
+    80% {
+      transform: scale(0.8);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
 
   &:hover,
   &:focus {
-    @keyframes heartbeat {
-      0% {
-        transform: scale(1);
-      }
-
-      20% {
-        transform: scale(1.2);
-      }
-
-      40% {
-        transform: scale(1);
-      }
-
-      60% {
-        transform: scale(1.2);
-      }
-
-      80% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(1);
-      }
-    }
+    animation-play-state: paused;
   }
 }
