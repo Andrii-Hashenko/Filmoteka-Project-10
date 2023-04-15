@@ -1,20 +1,18 @@
 // Container
 
-.container {
+.conteiner {
     display: block;
     margin: 0 auto;
     width: 320px;
     padding: 0 20px;
   
-    // Container for tablets
-  
+     
     @media screen and (min-width: 768px) {
       width: 768px;
       padding: 0 32px;
     }
   
-    // Container for desktop
-  
+      
     @media screen and (min-width: 1280px) {
       width: 1280px;
       padding: 0 32px;
