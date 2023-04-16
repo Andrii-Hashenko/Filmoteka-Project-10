@@ -1,4 +1,17 @@
 @import './common';
-@import './example';
-@import './header';
-// @import './header_library';
+
+@import './utils/mixin';
+@import './utils/variables';
+
+@import './base/container';
+@import './base/fonts';
+
+@import './components/cards';
+@import './components/gallery-cards';
+@import './components/library-cards';
+
+@import './layouts/header';
+@import './layouts/pagination';
+@import './layouts/footer';
+@import './layouts/modal-card';
+@import './layouts/team-card';
