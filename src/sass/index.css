@@ -1,0 +1,115 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+  padding: 0 20px;
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding: 0 32px;
+  }
+}
+
+.footer {
+  padding-right: 36px;
+  padding-left: 48px;
+  text-align: center;
+  min-width: 320;
+}
+@media screen and (min-width: 768) {
+  .footer {
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+}
+
+.copyright {
+  display: block;
+}
+@media screen and (min-width: 768) {
+  .copyright {
+    display: inline-block;
+  }
+}
+
+.footer-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.14;
+}
+@media screen and (min-width: 768px) {
+  .footer-text {
+    font-size: 16px;
+    line-height: 1.187;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.footer-svg {
+  animation: heartBeat;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+}
+.footer-svg:hover, .footer-svg:focus {
+  animation-play-state: paused;
+}/*# sourceMappingURL=index.css.map */

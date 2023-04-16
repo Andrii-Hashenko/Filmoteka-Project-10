@@ -23,9 +23,14 @@ export function createGalleryMarkup(films) {
         </div>
         <div class="film__info">
           <p class="film__name">${film.title ?? film.name}</p>
-          <p class="film__descr">${genres} | ${filmYear}</p>
+          <p class="film__description">${genres} | ${filmYear}</p>
         </div>
       </li>`;
     })
     .join('');
 }
+
+//  <div class="img__row">
+//    <p class="film__vote">${vote}</p>
+//    <p class="film__releaseDate">${releaseDate}</p>
+//  </div>;
