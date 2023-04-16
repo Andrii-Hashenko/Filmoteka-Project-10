@@ -19,6 +19,7 @@
     list-style: none;
     display: grid;
     grid-template-columns: auto;
+    gap: 20px;
 
     @media screen and (min-width: 767.98px) {
         // flex-direction: row;

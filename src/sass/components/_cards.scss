@@ -1,6 +1,7 @@
 .film__card {
     display: flex;
     flex-direction: column;
+
 }
 
 .film__thumb {
@@ -48,7 +49,7 @@
     padding-top: 10px;
 
     // @media (max-width: 767.98px) {
-    //     padding-top: 1px;
+    //     padding-top: 10px;
     // }
 
     @media screen and (min-width: 767.98px) {
