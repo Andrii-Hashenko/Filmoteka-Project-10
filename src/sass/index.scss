@@ -1,16 +1,15 @@
-@import './common';
+@import './base/common';
+@import './base/container';
+@import './base/fonts';
 
 @import './utils/mixin';
 @import './utils/variables';
-
-@import './base/container';
-@import './base/fonts';
 
 @import './components/cards';
 @import './components/gallery-cards';
 @import './components/library-cards';
 
-@import './header';
+@import './layouts/header';
 @import './layouts/pagination';
 @import './layouts/footer';
 @import './layouts/modal-card';
