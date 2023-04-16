@@ -1,0 +1,26 @@
+team-card.hbs
+
+<div class='team-section'>
+  <div class='team-section__container'>
+    <h2 class='team__title'>
+      <span class='team-title-accent' data-key='our'>Our </span><span data-key='team'>Team</span>
+    </h2>
+    <ul class='cards-container js-team list'>
+      {{#each this}}
+        <li id='{{id}}' class='card'>
+          <a href='#{{id}}' class='link'>
+            <div class='card__content'>
+              <div class='imgBox'>
+                <img class='imgBox__img' src='{{image}}' alt='{{name}}' />
+              </div>
+              <div class='contentBox'>
+                <h3 class='contentBox__title' data-key='dev-name'>{{name}}<br />
+                  <span class='contentBox__subtitle' data-key='dev-pos'>{{description}}</span></h3>
+              </div>
+            </div>
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
