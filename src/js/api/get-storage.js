@@ -1,3 +1,5 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 const btnQueueStorage = document.querySelector('.get-queue');
 const btnLibraryStorage = document.querySelector('.get-library');
 
@@ -9,8 +11,8 @@ function getStorage(e) {
 
   const KEY_STORAGE = e.currentTarget.name;
   const fetchStorage = localStorage.getItem(KEY_STORAGE);
-  const parsData = checkStorage === null ? undefined : JSON.parse(fetchStorage);
- 
+  const parsData = fetchStorage === null ? undefined : JSON.parse(fetchStorage);
+
   if (parsData) {
     return parsData;
   }
