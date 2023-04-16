@@ -1,9 +1,6 @@
 import './sass/index.scss';
 
-
-
-
-
+import './js/gallery/render-film-cards';
 
 const movies = new MoviesApi();
 const refs = getRefs();
@@ -26,4 +23,3 @@ function onFormSubmit(e) {
 }
 
 onLoadPage();
-

@@ -14,6 +14,16 @@ export default {
   },
 };
 
+export async function getTrending(page = 1) {
+  const url = `${BASE_URL}/trending/all/day?api_key=${API_KEY}&language=en-US&page=${page}`;
+  return await axios
+    .get(url)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => console.log(error));
+}
+
 async function fetchMovieSearcher(text, page) {
   try {
     const { data } = await axios.get(
