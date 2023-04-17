@@ -5,12 +5,10 @@
 @import './utils/mixin';
 @import './utils/variables';
 
-@import './components/cards';
-@import './components/gallery-cards';
-@import './components/library-cards';
-
 @import './layouts/header';
 @import './layouts/header_library';
+@import './layouts/cards';
+@import './layouts/gallery-cards';
 @import './layouts/pagination';
 @import './layouts/footer';
 @import './layouts/modal-card';
