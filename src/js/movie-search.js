@@ -1,5 +1,5 @@
-import { API_KEY, SEARCH_URL,} from '.src/.api.js/';
-import { fetchMovieSearcher } from '.src/.api-service.js';
+import { API_KEY, SEARCH_URL,} from '.src/.js/.api.js/';
+import { fetchMovieSearcher } from '.src/.js/.api-service.js';
 import axios from 'axios';
 
 //const SEARCH_URL = '${BASE_URL}/search/movi';
@@ -28,6 +28,7 @@ async function onSearchingMov(event) {
     console.log(error);
   }
 }
+console.log(onSearchingMov);
 //отримати фільми
  function fetchMoviesKeyword() {
    const { data } = axios.get(SEARCH_URL, {
@@ -45,7 +46,6 @@ async function onSearchingMov(event) {
   return cards.map(card => {
     const moviesEl = (document.querySelector('.search-wrapper').innerHTML = '');
     cards.films.forEach(movie => {
-      const movieEl = document.createElement('div');
       movieEl.classList.add('movie');
       movieEl.innerHTML = `< div class="search-wrapper" >
       <form class="header__search-form" action="GET">
@@ -67,26 +67,5 @@ async function onSearchingMov(event) {
   });
 }*/
 
-//function clearPage() {
-//}
-//2.
-/*async function fetchMovieSearcher(text, page) {
-  try {
-    const { data } = await axios.get(
-      `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`
-    );
-    return data;
-  } catch (error) {
-    console.error('Smth wrong with api search fetch' + error);
-  }
-}
 
-async function getMovieById(id) {
-  try {
-    const { data } = await axios.get(`${ID_URL}${id}?api_key=${API_KEY}`);
-    const result = {};
-  } catch (error) {
-    console.error('Smth wrong with api ID fetch' + error);
-  }
 
-}*/
