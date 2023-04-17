@@ -1,51 +1,44 @@
-import { API_KEY, SEARCH_URL, ID_URL } from '.src/.js/.api/.api.js';
+import {
+  API_KEY,
+  SEARCH_URL,
+  BASE_URL} from '.src/.api.js/.storage/.movie-search.js';
 import axios from 'axios';
 
-const SEARCH_URL = '${BASE_URL}/search/movi';
-const refs = {
-  form: document.querySelector('.header__search-form'),
-  input: (document.querySelector('.header__input').innerHTML = ' '),
-  button: document.querySelector('.header__btn'),
-};
-refs.form.addEventListener('submit', searchingMov);
-const url = `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`;
+//const SEARCH_URL = '${BASE_URL}/search/movi';
+//const url = `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`;
+const headerNav = document.querySelector('.header-nav');
+const form = (document.querySelector('.header__search-form').innerHTML = ' ');
+const inputWrapper = document.querySelector('.input-wrapper');
+const input = document.querySelector('.header__input');
 
+//const button = document.querySelector('.header__btn');
+
+form.addEventListener('submit', searchingMov);
 //let searchQuery = '';
 //let currentPage = 1;
 
 //searchingMov(SEARCH_URL);
 //пошук фільмів
-async function searchingMov(event) {
-  try {
-    event.preventDefault();
-
-    url.searchQuery = event.currentTarget.elements.searchQuery.value.trim();
-    if (url.searchQuery === '') return;
-
-    const data = await axios.get(
-      `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`
-    );
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
-}
+function searchingMov(event) {
+  event.preventDefault();
+  const searchValue = form.value.trim();
+  if (!searchQuery === '') return;
+  } 
 
 //відображення фільмів
 /*function showMov(cards) {
-  const moviesEl = document.querySelector(".search-wrapper")
-  document.querySelector(".search-wrapper").innerHTML = "";
-  cards.films.forEach((movie) => {
-    const movieEl = document.createElement("div");
-    movieEl.classList.add("movie");
-    movieEl.innerHTML = `
- `< div class="search-wrapper" >
+  return cards.map(card => {
+    const moviesEl = (document.querySelector('.search-wrapper').innerHTML = '');
+    cards.films.forEach(movie => {
+      const movieEl = document.createElement('div');
+      movieEl.classList.add('movie');
+      movieEl.innerHTML = `< div class="search-wrapper" >
       <form class="header__search-form" action="GET">
         <div class="input-wrapper">
           <input
             class="header__input"
             type="text"
-            name="query"
+            name="${card.name}"
             placeholder="Movie search"
           />
           <button class="header__btn" type="submit" aria-label="search">
@@ -54,8 +47,10 @@ async function searchingMov(event) {
             </svg>
           </button>
         </div>
-      </form>
-  });*/
+      </form>`;
+    });
+  });
+}*/
 
 //function clearPage() {
 //}
