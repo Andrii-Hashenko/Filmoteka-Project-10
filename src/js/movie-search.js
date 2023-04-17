@@ -13,9 +13,7 @@ function onSearchingMov(event) {
     return;
   }
 }
-
 //отримати фільми
 //function fetchMoviesKeyword()
-
 //відображення фільмів
 /*function showMov(cards)*/
