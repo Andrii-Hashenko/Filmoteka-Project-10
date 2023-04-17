@@ -29,9 +29,8 @@ async function onSearchingMov(event) {
   }
 }
 //отримати фільми
-async function fetchMoviesKeyword() {
-  try {
-    const { data } = await axios(SEARCH_URL, {
+ function fetchMoviesKeyword() {
+   const { data } = await axios(SEARCH_URL, {
       params: {
         api_key: API_KEY,
         query: this.searchQuery,
@@ -39,10 +38,8 @@ async function fetchMoviesKeyword() {
       },
     });
     return data.results;
-  } catch (error) {
-    console.log(error);
   }
-}
+ 
 //відображення фільмів
 /*function showMov(cards) {
   return cards.map(card => {
