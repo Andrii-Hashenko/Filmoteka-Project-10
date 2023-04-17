@@ -1,5 +1,5 @@
 import createLibraryMarkup from '../gallery/libraryMarkupCards';
-// import refs from '../sass/layouts/_header_library.scss';
+import refs from '../sass/layouts/_header_library.scss';
 
 export {
   libraryEl,
@@ -27,7 +27,7 @@ libraryEl.addEventListener('click', onLibraryClick);
 watchedEl.addEventListener('click', onWatchedClick);
 queueEl.addEventListener('click', onQueueClick);
 
-// Функция обработки события при нажатии на My Library
+// Функція обробки події при натисканні на My Library
 function onLibraryClick(e) {
   e.preventDefault();
 
@@ -46,7 +46,7 @@ function onLibraryClick(e) {
   btnsEl.classList.add('js-show');
 }
 
-// Функция обработки события при нажатии на Watched
+// Функція обробки події при натисканні на Watched
 function onWatchedClick(e) {
   paginationLibElement.innerHTML = '';
   myLibraryWatchedRender(e);
@@ -54,7 +54,7 @@ function onWatchedClick(e) {
   queueEl.classList.remove('button--orange');
 }
 
-// Функция обработки события при нажатии на Queue
+// Функція обробки події при натисканні на Queue
 function onQueueClick(e) {
   paginationLibElement.innerHTML = '';
   watchedEl.classList.remove('button--orange');
@@ -62,7 +62,7 @@ function onQueueClick(e) {
   myLibraryQueueRender(e);
 }
 
-// Функция рендера библиотеки фильмов раздела Watched
+// Функція рендеру бібліотеки фільмів розділу Watched
 function myLibraryWatchedRender(e) {
   e.preventDefault();
   collectionList.innerHTML = '';
@@ -82,7 +82,7 @@ function myLibraryWatchedRender(e) {
   }
 }
 
-// Функция рендера библиотеки фильмов раздела Queue
+// Функція рендеру бібліотеки фільмів розділу Queue
 function myLibraryQueueRender(e) {
   e.preventDefault();
   collectionList.innerHTML = '';
@@ -101,18 +101,18 @@ function myLibraryQueueRender(e) {
   }
 }
 
-// функция рендера
+// Функція рендеру
 function renderFile(results) {
   collectionList.innerHTML = render({ results });
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
 
-// Пагинация My Library
+// Пагінація My Library
 
 const paginationLibElement = document.getElementById('paginationLibrary');
 
-// Функция разделющаяgj страницам массив фильмов из LocalStorage 
+
 function sliceLibraryOnPage(value) {
   if (value === null) {
     return;
@@ -130,14 +130,14 @@ function sliceLibraryOnPage(value) {
 
 let currentLibPage = 1;
 
-// Функция рендера пагинации библиотеки
+// Функція рендеру пагінації бібліотеки
 function renderLibPag(value) {
   const totalLibPages = value.length;
   renderLibPaginationBtn(value, totalLibPages);
   makeActiveLibBtn();
 }
 
-// Функция рендера кнопок пагинации библиотеки
+// Функція рендеру кнопок пагінації бібліотеки
 function renderLibPaginationBtn(arrayPagination, totalLibPages) {
   const before = currentLibPage - 2;
   const after = currentLibPage + 2;
@@ -164,7 +164,7 @@ function renderLibPaginationBtn(arrayPagination, totalLibPages) {
   }
 }
 
-// Функция нажатия перехода на нужную страницу при нажатии на кнопку
+// Функція натискання переходу на потрібну сторінку під час натискання на кнопку
 function onLibBtnClick(e) {
   e.preventDefault();
 
@@ -190,7 +190,7 @@ function onLibBtnClick(e) {
   }
 }
 
-// Функция выделяющая кнопку акттивной страницы
+// Функція, що виділяє кнопку активної сторінки
 function makeActiveLibBtn() {
   let pages = paginationLibElement.querySelectorAll('a');
 
@@ -205,3 +205,23 @@ function makeActiveLibBtn() {
 }
 
 paginationLibElement.addEventListener('click', onLibBtnClick);
+
+
+
+
+// Функція перевірки наявності в "переглянутих" фільмів і створення масиву якщо немає
+function isGetWatched() {
+  if (localStorage.getItem('watched')) return;
+  localStorage.setItem('watched', '[]');
+}
+// Функція рендеру
+export function renderFile(results) {
+  collectionList.innerHTML = render({ results });
+}
+
+// Функція перевірки наявності в "черзі" фільмів і створення масиву якщо немає
+function isGetQueue() {
+  if (localStorage.getItem('queue')) return;
+  localStorage.setItem('queue', '[]');
+
+}
