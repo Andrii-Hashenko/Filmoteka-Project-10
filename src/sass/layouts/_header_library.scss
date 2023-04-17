@@ -1,4 +1,4 @@
-.header {
+.header-wrapper {
   background-image: url(../images/header-red-background-mobile-min.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -181,6 +181,11 @@
   color: #000;
 }
 
+.header__link-home--current {
+  background-color: #000;
+  color: #fff;
+}
+
 .header__link-library {
   font-family: 'Roboto';
   font-style: normal;
@@ -223,6 +228,11 @@
   color: #fff;
 }
 
+.header__link-library--current {
+  background-color: #000;
+  color: #fff;
+}
+
 .header__user-links-wrapper {
   display: flex;
   margin-left: auto;
@@ -245,8 +255,8 @@
   padding: 10px 23px;
   width: 102px;
   height: 34px;
-  background-color: #b92f2c;
-  color: #fff;
+  background-color: #fff;
+  color: #b92f2c;
   border-radius: 100px;
   border: 0;
   text-decoration: none;
@@ -267,8 +277,8 @@
 .header__link-watched:hover,
 .header__link-watched:focus,
 .header__link-watched:active {
-  background-color: #fff;
-  color: #b92f2c;
+  background-color: #b92f2c;
+  color: #fff;
 }
 
 .header__link-queue {
