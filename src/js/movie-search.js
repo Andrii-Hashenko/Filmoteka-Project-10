@@ -10,7 +10,7 @@ const refs = {
 refs.form.addEventListener('submit', searchingMov);
 const url = `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`;
 
-//let searchQuery = '';
+let searchQuery = '';
 //let currentPage = 1;
 
 //searchingMov(SEARCH_URL);
