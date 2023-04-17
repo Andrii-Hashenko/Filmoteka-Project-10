@@ -1,4 +1,4 @@
-import { API_KEY, SEARCH_URL, BASE_URL } from '.src/.api.js/';
+import { API_KEY, SEARCH_URL,} from '.src/.api.js/';
 import { fetchMovieSearcher } from '.src/.api-service.js';
 import axios from 'axios';
 
@@ -20,7 +20,7 @@ async function onSearchingMov(event) {
     fetchMovieSearcher.searchQuery =
       event.currentTarget.elements.searchQuery.value.trim();
     if (fetchMovieSearcher.searchQuery === '') return;
-    const movies = await url.fetchMoviesKeyword();
+    const movies = await fetchMovieSearcher.fetchMoviesKeyword();
     if (movies.length === 0)
       // renderFilms(movies);
       form.reset();
@@ -30,7 +30,7 @@ async function onSearchingMov(event) {
 }
 //отримати фільми
  function fetchMoviesKeyword() {
-   const { data } = await axios(SEARCH_URL, {
+   const { data } = axios.get(SEARCH_URL, {
       params: {
         api_key: API_KEY,
         query: this.searchQuery,
