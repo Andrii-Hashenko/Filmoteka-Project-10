@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_KEY, BASE_URL, TREND_URL, ID_URL, ID_URL } from './api';
+import { API_KEY, BASE_URL, TREND_URL, SEARCH_URL, ID_URL } from './api';
 
 export default {
   async getTrendData(page) {
