@@ -27,7 +27,7 @@ export async function getTrending(page = 1) {
 async function fetchMovieSearcher(text, page) {
   try {
     const { data } = await axios.get(
-      `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`
+      `${SEARCH_URL}?api_key=${API_KEY}&language=en-US&query=${text}&page=${page}`
     );
     return data;
   } catch (error) {
@@ -37,7 +37,7 @@ async function fetchMovieSearcher(text, page) {
 
 async function getMovieById(id) {
   try {
-    const { data } = await axios.get(`${ID_URL}${id}?api_key=${API_KEY}`);
+    const { data } = await axios.get(`${ID_URL}${id}?api_key=${API_KEY}&language=en-US`);
     const result = {};
   } catch (error) {
     console.error('Smth wrong with api ID fetch' + error);

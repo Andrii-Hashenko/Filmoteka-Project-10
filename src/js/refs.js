@@ -7,19 +7,14 @@ export default function getRefs() {
     btnsEl: document.querySelector('.header__user-links-wrapper'),
     watchedEl: document.querySelector('.js-watched'),
     queueEl: document.querySelector('.js-queue'),
-    galleryfilm: document.querySelector('.list-films-js');
-
+    galleryfilm: document.querySelector('.list-films-js'),
+    libraryfilm: document.querySelector('#films-library'),
 
     //   примеры
-    
-  
+
     //   btnAddWatched: document.querySelector(''),
     //   btnAddQueue: document.querySelector(''),
-   
-    //   btnSectionInLibrary: document.querySelector(''),
-    //   homePage: document.querySelector(''),
-    //   headerByClass: document.querySelector(''),
-    //   headerByTeg: document.querySelector(''),
+
     //   search: document.querySelector(''),
     //   searchItem: document.querySelector(''),
     //   searchInput: document.querySelector(''),
