@@ -1,30 +1,48 @@
-import {
-  API_KEY,
-  SEARCH_URL,
-  BASE_URL} from '.src/.api.js/.storage/.movie-search.js';
+import { API_KEY, SEARCH_URL, BASE_URL } from '.src/.api.js/';
+import { fetchMovieSearcher } from '.src/.api-service.js';
 import axios from 'axios';
 
 //const SEARCH_URL = '${BASE_URL}/search/movi';
 //const url = `${SEARCH_URL}?api_key=${API_KEY}&query=${text}&page=${page}`;
-const headerNav = document.querySelector('.header-nav');
+
 const form = (document.querySelector('.header__search-form').innerHTML = ' ');
-const inputWrapper = document.querySelector('.input-wrapper');
-const input = document.querySelector('.header__input');
+//const inputWrapper = document.querySelector('.input-wrapper');
+//const input = document.querySelector('.header__input');
 
-//const button = document.querySelector('.header__btn');
-
-form.addEventListener('submit', searchingMov);
-//let searchQuery = '';
+form.addEventListener('submit', onSearchingMov);
+let searchQuery = '';
 //let currentPage = 1;
 
-//searchingMov(SEARCH_URL);
 //пошук фільмів
-function searchingMov(event) {
+async function onSearchingMov(event) {
   event.preventDefault();
-  const searchValue = form.value.trim();
-  if (!searchQuery === '') return;
-  } 
-
+  try {
+    fetchMovieSearcher.searchQuery =
+      event.currentTarget.elements.searchQuery.value.trim();
+    if (fetchMovieSearcher.searchQuery === '') return;
+    const movies = await url.fetchMoviesKeyword();
+    if (movies.length === 0)
+      // renderFilms(movies);
+      form.reset();
+  } catch (error) {
+    console.log(error);
+  }
+}
+//отримати фільми
+async function fetchMoviesKeyword() {
+  try {
+    const { data } = await axios(SEARCH_URL, {
+      params: {
+        api_key: API_KEY,
+        query: this.searchQuery,
+        language: this.language,
+      },
+    });
+    return data.results;
+  } catch (error) {
+    console.log(error);
+  }
+}
 //відображення фільмів
 /*function showMov(cards) {
   return cards.map(card => {
