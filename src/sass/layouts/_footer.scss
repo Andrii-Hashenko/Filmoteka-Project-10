@@ -18,11 +18,19 @@
 
 .copyright {
   display: block;
-  margin-left: 20px;
+  margin-left: 41px;
   margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
     display: inline-block;
+    margin: 0;
+  }
+}
+
+.footer-span-js {
+  margin-left: 22px;
+
+  @media screen and (min-width: 768px) {
     margin: 0;
   }
 }
