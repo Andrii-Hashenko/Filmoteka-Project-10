@@ -37,14 +37,15 @@ async function fetchMovieSearcher(text, page) {
 
 export async function getMovieById(id) {
   try {
-    const { data } = await axios.get(`${ID_URL}/${id}?api_key=${API_KEY}&language=en-US`);
+    const { data } = await axios.get(
+      `${ID_URL}/${id}?api_key=${API_KEY}&language=en-US`
+    );
 
     return data;
   } catch (error) {
     console.error('Smth wrong with api ID fetch' + error);
   }
 }
-
 
 // import axios from 'axios';
 // import { API_KEY, BASE_URL, TREND_URL, SEARCH_URL, ID_URL } from './api';
@@ -98,7 +99,6 @@ export async function getMovieById(id) {
 //   }
 // }
 
-
 // export async function getArrayofFilms(array) {
 //   const arrayOfFilms = array.map(async id => {
 //     return await axios
@@ -112,4 +112,3 @@ export async function getMovieById(id) {
 //   const resultData = await Promise.all(arrayOfFilms);
 //   return resultData;
 // }
-
