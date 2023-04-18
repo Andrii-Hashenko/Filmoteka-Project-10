@@ -105,18 +105,18 @@
 .header__btn {
   display: block;
   position: absolute;
-  top: 8px;
-  right: 14px;
+  top: 9px;
+  right: 10px;
   background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
   @media screen and (min-width: 768px) {
-    top: 11px;
-    right: 16px;
+    top: 10px;
+    right: 12px;
   }
   @media screen and (min-width: 1280px) {
-    top: 13px;
+    top: 12px;
   }
 }
 
@@ -180,53 +180,53 @@
 }
 
 .header__link-home--current {
-  // background-color: #000;
-  // color: #fff;
-  background-color: #fff;
-  color: #000;
-  outline: #000 solid 3px;
-}
-
-.header__link-library {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 19px;
-  margin-left: 4px;
-  margin-top: 14px;
-  width: 113px;
-  height: 34px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 100px;
-  border: 0;
-  text-decoration: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  @media screen and (min-width: 768px) {
-    width: 109px;
-    height: 38px;
-    padding: 12px 17px;
-    margin-left: 4px;
-    margin-top: 16px;
-  }
-  @media screen and (min-width: 1280px) {
-    width: 117px;
-    height: 42px;
-    padding: 14px 21px;
-    margin-left: 8px;
-  }
-}
-
-.header__link-library:hover,
-.header__link-library:focus {
   background-color: #000;
   color: #fff;
+  // background-color: #fff;
+  // color: #000;
+  // outline: #000 solid 3px;
 }
+
+// .header__link-library {
+//   font-family: 'Roboto';
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 12px;
+//   line-height: 1.17;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 10px 19px;
+//   margin-left: 4px;
+//   margin-top: 14px;
+//   width: 113px;
+//   height: 34px;
+//   background-color: #fff;
+//   color: #000;
+//   border-radius: 100px;
+//   border: 0;
+//   text-decoration: none;
+//   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+//   @media screen and (min-width: 768px) {
+//     width: 109px;
+//     height: 38px;
+//     padding: 12px 17px;
+//     margin-left: 4px;
+//     margin-top: 16px;
+//   }
+//   @media screen and (min-width: 1280px) {
+//     width: 117px;
+//     height: 42px;
+//     padding: 14px 21px;
+//     margin-left: 8px;
+//   }
+// }
+
+// .header__link-library:hover,
+// .header__link-library:focus {
+//   background-color: #000;
+//   color: #fff;
+// }
 
 .logo-wrapper-home {
   display: flex;
