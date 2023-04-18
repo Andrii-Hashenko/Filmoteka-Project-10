@@ -22,7 +22,7 @@
     @media screen and (min-width: 767.98px) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        // grid-template-rows: repeat(2, 1fr);
         gap: 32px;
 
     }
@@ -30,7 +30,16 @@
     @media screen and (min-width: 1280px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        // grid-template-rows: repeat(3, 1fr);
         gap: 16px;
     }
+}
+
+.nothing img {
+    display: flex;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+
 }

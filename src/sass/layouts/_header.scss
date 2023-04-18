@@ -174,15 +174,17 @@
 }
 
 .header__link-home:hover,
-.header__link-home:focus,
-.header__link-home:active {
+.header__link-home:focus {
   background-color: #000;
   color: #fff;
 }
 
 .header__link-home--current {
-  background-color: #000;
-  color: #fff;
+  // background-color: #000;
+  // color: #fff;
+  background-color: #fff;
+  color: #000;
+  outline: #000 solid 3px;
 }
 
 .header__link-library {
@@ -221,18 +223,12 @@
 }
 
 .header__link-library:hover,
-.header__link-library:focus,
-.header__link-library:active {
+.header__link-library:focus {
   background-color: #000;
   color: #fff;
 }
 
-.header__link-library--current {
-  background-color: #000;
-  color: #fff;
-}
-
-.logo-wrapper {
+.logo-wrapper-home {
   display: flex;
   flex-direction: row;
   align-items: center;

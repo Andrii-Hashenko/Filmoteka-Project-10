@@ -1,83 +1,75 @@
 [
     {
       "id": "1",
-      "name": "",
+      "name": "Andrii Hashenko",
       "description": "Team Lead",
       "image": "",
-      "github": "",
-      "linkdIn": "",
+      "github": "https://github.com/Andrii-Hashenko",
+      "linkdIn": "https://www.linkedin.com/in/andrii-hashenko-513492aa/",
       "telegram": ""
     },
     {
       "id": "2",
-      "name": "",
+      "name": "Iryna NebesnaIryna",
       "description": "Scrum Master",
       "image": "",
-      "github": "",
+      "github": "https://github.com/NebesnaIryna",
       "linkdIn": "",
       "telegram": ""
     },
     {
       "id": "3",
-      "name": "",
+      "name": "SerhiiShymko",
       "description": "Developer",
       "image": "",
-      "github": "",
+      "github": "https://github.com/SerhiiShymko",
       "linkdIn": "",
       "telegram": ""
     },
     {
       "id": "4",
-      "name": "",
+      "name": "Sergiy Kushnir",
       "description": "Developer",
       "image": "",
-      "github": "",
+      "github": "https://github.com/Sergiy5",
       "linkdIn": "",
       "telegram": ""
     },
     {
       "id": "5",
-      "name": "",
+      "name": "OlenkaPasko",
       "description": "Developer",
       "image": "",
-      "github": "",
+      "github": "ttps://github.com/OlenkaPasko",
       "linkdIn": "",
       "telegram": ""
     },
     {
       "id": "6",
-      "name": "",
+      "name": "MarioKarv",
       "description": "Developer",
       "image": "",
-      "github": "",
+      "github": "https://github.com/MarioKarv",
       "linkdIn": "",
       "telegram": ""
     },
     {
       "id": "7",
-      "name": "",
+      "name": "farfalina1908",
       "description": "Developer",
       "image": "",
-      "github": "",
+      "github": "https://github.com/farfalina1908",
       "linkdIn": "",
       "telegram": ""
     },
     {
       "id": "8",
-      "name": "",
+      "name": "Nikita",
       "description": "Developer",
       "image": "",
-      "github": "",
+      "github": "https://github.com/ArbalestARX7",
       "linkdIn": "",
       "telegram": ""
     },
-    {
-      "id": "9",
-      "name": "",
-      "description": "Developer",
-      "image": "",
-      "github": "",
-      "linkdIn": "",
-      "telegram": ""
-    }
+   
   ]
