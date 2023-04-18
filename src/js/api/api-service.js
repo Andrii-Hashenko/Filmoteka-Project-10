@@ -35,16 +35,21 @@ async function fetchMovieSearcher(text, page) {
   }
 }
 
-async function getMovieById(id) {
+export async function getMovieById(id) {
   try {
+
     const { data } = await axios.get(
       `${ID_URL}${id}?api_key=${API_KEY}&language=en-US`
     );
+
     const result = {};
+
+    return data;
   } catch (error) {
     console.error('Smth wrong with api ID fetch' + error);
   }
 }
+
 
 export async function getArrayofFilms(array) {
   const arrayOfFilms = array.map(async id => {
@@ -59,3 +64,4 @@ export async function getArrayofFilms(array) {
   const resultData = await Promise.all(arrayOfFilms);
   return resultData;
 }
+
