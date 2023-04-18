@@ -6,8 +6,6 @@ const ID_URL = '${BASE_URL}/movie';
 
 export { API_KEY, BASE_URL, TREND_URL, SEARCH_URL, ID_URL };
 
-
-
 // https://api.themoviedb.org/3/trending/all/day?api_key=<<api_key>>
 // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false
 // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
