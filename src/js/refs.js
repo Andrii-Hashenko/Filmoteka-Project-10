@@ -1,5 +1,5 @@
-export default function getRefs() {
-  return {
+const refs = {
+  
     homeEl: document.querySelector('.header__link-home'),
     libraryEl: document.querySelector('.header__link-library'),
     headerEl: document.querySelector('.header'),
@@ -20,4 +20,4 @@ export default function getRefs() {
     //   searchInput: document.querySelector(''),
     //   pagination: document.querySelector(''),
   };
-}
+export default refs;
