@@ -53,5 +53,5 @@ function lookQueue() {
   });
 }
 
-// lookWatched();
-// lookQueue();
+lookWatched();
+lookQueue();
