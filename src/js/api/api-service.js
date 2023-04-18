@@ -37,9 +37,15 @@ async function fetchMovieSearcher(text, page) {
 
 async function getMovieById(id) {
   try {
-    const { data } = await axios.get(`${ID_URL}${id}?api_key=${API_KEY}&language=en-US`);
+
+    const { data } = await axios.get(`${ID_URL}/${id}?api_key=${API_KEY}`);
+
     const result = {};
+
+    return data;
   } catch (error) {
     console.error('Smth wrong with api ID fetch' + error);
   }
 }
+
+
