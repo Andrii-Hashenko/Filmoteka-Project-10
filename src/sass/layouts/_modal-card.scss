@@ -1,0 +1,261 @@
+.modal-film {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: width 2s;
+}
+
+.modal--show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 48px 20px 40px 20px;
+
+  @media screen and (min-width: 320px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 40px 72px 64px 36px;
+    width: 704px;
+    display: flex;
+    gap: 68px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 40px 20px;
+    width: 806px;
+    gap: 16px;
+  }
+}
+
+.modal__button {
+  position: absolute;
+  color: #000;
+  border: none;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  background-color: #ffffff;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.modal__cross {
+  fill: #000;
+}
+
+.modal_image {
+  margin-bottom: 20px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  @media screen and (min-width: 320px) {
+    width: 240px;
+    height: 357px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 264px;
+    height: 374px;
+    margin-bottom: 0;
+    max-width: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 375px;
+    height: 478px;
+  }
+}
+
+.modal_title {
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+.modal_documentation {
+  display: flex;
+}
+
+.documentation_text {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.properties {
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #8c8c8c;
+}
+
+.properties_storage {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.properties_value {
+  margin-left: 42px;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  @media screen and (min-width: 1200px) {
+    margin-left: 85px;
+  }
+}
+
+.documentation_value {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.modal_about_title {
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+
+  margin-bottom: 8px;
+}
+
+.modal_description {
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+
+  margin-bottom: 20px;
+}
+
+.modal_buttons {
+  display: flex;
+  gap: 4px;
+
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+  }
+}
+
+.modal_watched {
+  width: 125px;
+  height: 34px;
+  // padding: 10px 12px;
+
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
+
+  background: #b92f2c;
+  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+  border: none;
+  border-radius: 100px;
+  transition-property: color, border, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #b92f2c;
+
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+  @media screen and (min-width: 768px) {
+    width: 137px;
+    height: 38px;
+    // padding: 12px 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // padding: 14px 32px;
+    width: 165px;
+    height: 42px;
+  }
+}
+
+.modal_queue {
+  width: 111px;
+  height: 34px;
+  // padding: 10px 14px;
+  cursor: pointer;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #b92f2c;
+
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  text-transform: uppercase;
+  transition-property: color, border, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    border: none;
+    background-color: #b92f2c;
+    box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+  }
+  @media screen and (min-width: 768px) {
+    // padding: 12px 18px;
+
+    width: 119px;
+    height: 38px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // padding: 14px 24px;
+    width: 134px;
+    height: 42px;
+  }
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
