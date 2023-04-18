@@ -1,5 +1,5 @@
 import { genresLibraryFormat } from './formatGenres';
-import no_poster from '../images/no_poster.jpg';
+import no_poster from '../../images/no_poster/no_poster.wp.webp';
 
 function createLibraryMarkup(films) {
   return films
@@ -35,7 +35,6 @@ function createLibraryMarkup(films) {
 //    <p class="film__releaseDate">${releaseDate}</p>
 //  </div>;
 
-
 // import { genresLibraryFormat } from './formatGenres';
 // import no_poster from '../../images/no_poster/no_poster.wp.webp';
 
@@ -52,12 +51,12 @@ function createLibraryMarkup(films) {
 
 //       return `
 //       <li class="film__card" data-id="${film.id}">
-//         <div class="film__thumb">        
+//         <div class="film__thumb">
 //             <img class="film__image"
 //             src="${poster}"
 //             alt="${film.title ?? film.name}"
 //             loading="lazy"
-//             />      
+//             />
 //         </div>
 //         <div class="film__info">
 //           <p class="film__name">${film.title ?? film.name}</p>
