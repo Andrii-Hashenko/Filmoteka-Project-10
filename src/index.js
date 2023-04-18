@@ -2,6 +2,8 @@ import './sass/index.scss';
 
 import './js/gallery/render-film-cards';
 
+import './js/modal/film-modal'
+
 const movies = new MoviesApi();
 const refs = getRefs();
 
