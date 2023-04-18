@@ -1,9 +1,9 @@
 import { getTrending } from '../api/api-service';
 import { createGalleryMarkup } from '../gallery/galleryMarkupCards';
+import refs from '../refs';
 
-const galleryfilm = document.querySelector('.list-films-js');
 getTrending().then(data => {
-  galleryfilm.insertAdjacentHTML(
+  refs.galleryfilm.insertAdjacentHTML(
     'beforeend',
     createGalleryMarkup(data.results)
   );
