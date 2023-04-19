@@ -24,7 +24,7 @@ export async function getTrending(page = 1) {
     .catch(error => console.log(error));
 }
 
-async function fetchMovieSearcher(text, page) {
+export async function fetchMovieSearcher(text, page){
   try {
     const { data } = await axios.get(
       `${SEARCH_URL}?api_key=${API_KEY}&language=en-US&query=${text}&page=${page}`
