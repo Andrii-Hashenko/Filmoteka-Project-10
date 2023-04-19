@@ -1,5 +1,5 @@
 import './sass/index.scss';
-
+import './js/storage/set-storage';
 import './js/api/api';
 import './js/api/api-service';
 import './js/refs';
