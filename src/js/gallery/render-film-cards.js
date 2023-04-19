@@ -2,14 +2,13 @@ import { getTrending } from '../api/api-service';
 import { createGalleryMarkup } from '../gallery/galleryMarkupCards';
 import { genresGalleryFormatModal } from './formatGenres';
 import { getMovieById } from '../api/api-service';
+import { addMovieToStorage } from '../storage/set-storage';
 
 const modalEl = document.querySelector('.modal');
-const addWatchedBtn = document.querySelector('.add-to-watched');
 const libraryWatchedHeaderBtn = document.querySelector('.js-watched');
 const galleryfilm = document.getElementById('films-main');
 const libraryfilm = document.getElementById('films-library');
-console.log(galleryfilm);
-console.log(libraryfilm);
+const btnStorage = document.querySelector('.modal_buttons');
 
 let movieId = null;
 
@@ -86,30 +85,29 @@ window.addEventListener('keydown', e => {
 
 /*Library Watched*/
 
-addWatchedBtn.addEventListener('click', addToWatched);
 
-function addToWatched() {
-  modalEl.style.display = 'none';
-  addToWatchedQueueLS(movieId);
+btnStorage.addEventListener('click', addToWatched);
 
-  renderWatched();
+function addToWatched(e) {
+  const nameEvt = e.target.name;
+addMovieToStorage(nameEvt, movieId);
 };
 
 
-function addToWatchedQueueLS(movieId) {
-  if (checkIfWatched(movieId)) {
-    watchedMoviesIds = watchedMoviesIds.filter(id => id !== movieId);
+// function addToWatchedQueueLS(movieId) {
+//   if (checkIfWatched(movieId)) {
+//     watchedMoviesIds = watchedMoviesIds.filter(id => id !== movieId);
     
-  } else {
-    watchedMoviesIds.push(movieId);
-  }
+//   } else {
+//     watchedMoviesIds.push(movieId);
+//   }
 
-  localStorage.setItem('watched', JSON.stringify(watchedMoviesIds));
-}
+//   localStorage.setItem('watched', JSON.stringify(watchedMoviesIds));
+// }
 
-function checkIfWatched(movieId) {
-  return watchedMoviesIds.includes(movieId);
-}
+// function checkIfWatched(movieId) {
+//   return watchedMoviesIds.includes(movieId);
+// }
 
 libraryWatchedHeaderBtn.addEventListener('click', renderWatched);
 
