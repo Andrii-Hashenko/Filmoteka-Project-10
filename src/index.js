@@ -11,6 +11,7 @@ import './js/gallery/galleryMarkupCards';
 import './js/gallery/libraryMarkupCards';
 // import './js/gallery/render-film-storege';
 import './js/gallery/genresList';
+// import './js/components/tui-pagination';
 // import './js/modal/team-modal';
 
 
