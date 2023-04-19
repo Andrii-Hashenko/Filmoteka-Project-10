@@ -1,14 +1,14 @@
 const KEY_WATCHED = 'watched';
 const KEY_QUEUE = 'queue';
-export const watched = getWatchedLocalStoradge() || [];
-export const queue = getQueueLocalStoradge() || [];
+export let watched = getWatchedLocalStorage() || [];
+export let queue = getQueueLocalStorage() || [];
 
 export function onAddToWatched(id) {
   if (watched.includes(id)) {
     return;
   }
   watched.push(id);
-  setWatchedLocalStoradge(watched);
+  setWatchedLocalStorage(watched);
 }
 
 export function onAddToQueue(id) {
@@ -16,21 +16,21 @@ export function onAddToQueue(id) {
     return;
   }
   queue.push(id);
-  setQueueLocalStoradge(queue);
+  setQueueLocalStorage(queue);
 }
 
-export function getWatchedLocalStoradge() {
+export function getWatchedLocalStorage() {
   return JSON.parse(localStorage.getItem(KEY_WATCHED));
 }
 
-export function getQueueLocalStoradge() {
+export function getQueueLocalStorage() {
   return JSON.parse(localStorage.getItem(KEY_QUEUE));
 }
 
-export function setWatchedLocalStoradge(arr) {
+export function setWatchedLocalStorage(arr) {
   localStorage.setItem(KEY_WATCHED, JSON.stringify(arr));
 }
 
-export function setQueueLocalStoradge(arr) {
+export function setQueueLocalStorage(arr) {
   localStorage.setItem(KEY_QUEUE, JSON.stringify(arr));
 }

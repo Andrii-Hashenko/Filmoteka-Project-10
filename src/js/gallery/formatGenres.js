@@ -14,6 +14,12 @@ export function genresGalleryFormat(array) {
   }
 }
 
+
+export function genresGalleryFormatModal(arrOfGenres) {
+  return arrOfGenres.map(genr => genr.name).join(', ');
+}
+
+
 export function genresLibraryFormat(array) {
   const genreResult = array.map(genre => genre.name);
 
@@ -25,3 +31,6 @@ export function genresLibraryFormat(array) {
     return genreResult.join(', ');
   }
 }
+
+
+

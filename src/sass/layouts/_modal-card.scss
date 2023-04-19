@@ -7,38 +7,54 @@
   left: 0;
   right: 0;
   bottom: 0;
+  
 
   &__backdrop {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0,0,0, 0.5);
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 
-      justify-content: center;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
   }
 
   &__window {
-      height: 568px;
-      width: 806px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
+    // height: 568px;
+    width: 280px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    margin-top: 50px;
+    padding: 48px 20px 40px 20px;
 
-      background-color: #fff;
-      position: relative;
+    background-color: #fff;
+    position: relative;
+    @media screen and (min-width: 320px) {
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 40px 72px 64px 36px;
+      width: 704px;
+      display: flex;
+      gap: 68px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      padding: 40px 20px;
+      width: 806px;
+      gap: 16px;
+    }
   }
 }
 
 /*Для редактирования*/
 
 .modal--show {
-display: flex;
-justify-content: center;
-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 // .modal {
 //   @media screen and (min-width: 320px) {
@@ -66,215 +82,215 @@ align-items: center;
   top: 8px;
   right: 8px;
   padding: 0;
-  background-color: #e50a0a;
+  // background-color: #e50a0a;
   width: 30px;
   height: 30px;
   cursor: pointer;
 }
 
 .modal__cross {
-fill: #000;
-
+  fill: #000;
 }
 
 .modal_image {
-margin-bottom: 20px;
-display: block;
-object-fit: cover;
-border-radius: 5px;
-@media screen and (min-width: 320px) {
-  width: 240px;
-  height: 357px;
-}
+  margin-bottom: 20px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  @media screen and (min-width: 320px) {
+    width: 240px;
+    height: 357px;
+  }
 
-@media screen and (min-width: 768px) {
-  width: 264px;
-  height: 374px;
-  margin-bottom: 0;
-  max-width: none;
-}
+  @media screen and (min-width: 768px) {
+    width: 264px;
+    height: 374px;
+    margin-bottom: 0;
+    max-width: none;
+  }
 
-@media screen and (min-width: 1200px) {
-  width: 375px;
-  height: 478px;
-}
+  @media screen and (min-width: 1200px) {
+    width: 375px;
+    height: 478px;
+  }
 }
 
 .modal_title {
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 23px;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
 
-color: #000000;
-margin-bottom: 20px;
-@media screen and (min-width: 1200px) {
-  font-size: 30px;
-  line-height: 35px;
-}
+  color: #000000;
+  margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
 .modal_documentation {
-display: flex;
+  display: flex;
 }
 
 .documentation_text {
-&:not(:last-child) {
-  margin-bottom: 8px;
-}
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .properties {
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
 
-color: #8c8c8c;
+  color: #8c8c8c;
 }
 
 .properties_storage {
-display: inline-block;
-margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .properties_value {
-margin-left: 42px;
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-color: #000000;
-@media screen and (min-width: 1200px) {
-  margin-left: 85px;
-}
+  margin-left: 42px;
+  // font-family: 'Roboto';
+  max-width: 200px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  @media screen and (min-width: 1200px) {
+    margin-left: 85px;
+  }
 }
 
 .documentation_value {
-&:not(:last-child) {
-  margin-bottom: 8px;
-}
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .modal_about_title {
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 16px;
-color: #000000;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
 
-margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .modal_description {
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 20px;
-color: #000000;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
 
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .modal_buttons {
-display: flex;
-gap: 4px;
+  display: flex;
+  gap: 4px;
 
-@media screen and (min-width: 768px) {
-  gap: 8px;
-}
+  @media screen and (min-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .add-to-watched {
-width: 125px;
-height: 34px;
-// padding: 10px 12px;
+  width: 125px;
+  height: 34px;
+  // padding: 10px 12px;
 
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
-text-transform: uppercase;
-cursor: pointer;
-color: #ffffff;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #ffffff;
 
-background: #b92f2c;
-box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
-border: none;
-border-radius: 100px;
-transition-property: color, border, background-color;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-&:hover,
-&:focus {
-  color: #b92f2c;
+  background: #b92f2c;
+  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+  border: none;
+  border-radius: 100px;
+  transition-property: color, border, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #b92f2c;
 
-  background-color: #ffffff;
-  border: 1px solid #000000;
-}
-@media screen and (min-width: 768px) {
-  width: 137px;
-  height: 38px;
-  // padding: 12px 18px;
-}
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
+  @media screen and (min-width: 768px) {
+    width: 137px;
+    height: 38px;
+    // padding: 12px 18px;
+  }
 
-@media screen and (min-width: 1200px) {
-  // padding: 14px 32px;
-  width: 165px;
-  height: 42px;
-}
+  @media screen and (min-width: 1200px) {
+    // padding: 14px 32px;
+    width: 165px;
+    height: 42px;
+  }
 }
 
 .add-to-queue {
-width: 111px;
-height: 34px;
-// padding: 10px 14px;
-cursor: pointer;
-// font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 14px;
+  width: 111px;
+  height: 34px;
+  // padding: 10px 14px;
+  cursor: pointer;
+  // font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
 
-color: #b92f2c;
+  color: #b92f2c;
 
-background: #ffffff;
-border: 1px solid #000000;
-border-radius: 100px;
-text-transform: uppercase;
-transition-property: color, border, background-color, box-shadow;
-transition-duration: 250ms;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-&:hover,
-&:focus {
-  color: #ffffff;
-  border: none;
-  background-color: #b92f2c;
-  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
-}
-@media screen and (min-width: 768px) {
-  // padding: 12px 18px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 100px;
+  text-transform: uppercase;
+  transition-property: color, border, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    border: none;
+    background-color: #b92f2c;
+    box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+  }
+  @media screen and (min-width: 768px) {
+    // padding: 12px 18px;
 
-  width: 119px;
-  height: 38px;
-}
+    width: 119px;
+    height: 38px;
+  }
 
-@media screen and (min-width: 1200px) {
-  // padding: 14px 24px;
-  width: 134px;
-  height: 42px;
-}
+  @media screen and (min-width: 1200px) {
+    // padding: 14px 24px;
+    width: 134px;
+    height: 42px;
+  }
 }
 
 .stop-scrolling {
-height: 100%;
-overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 // .modal-film {
@@ -295,7 +311,6 @@ overflow: hidden;
 //   justify-content: center;
 //   align-items: center;
 // }
-
 
 // .modal {
 //   position: relative;

@@ -1,4 +1,4 @@
-.footer {
+.footer .footer_bg {
   background-color: #f7f7f7;
   padding-top: 28px;
   padding-bottom: 28px;
@@ -101,4 +101,11 @@
   &:focus {
     animation-play-state: paused;
   }
+}
+
+.button_study {
+  border: none;
+  outline: none;
+  background-color: #f7f7f7;
+  padding: 0;
 }
