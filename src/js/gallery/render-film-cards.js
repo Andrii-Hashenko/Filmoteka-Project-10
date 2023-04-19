@@ -51,7 +51,9 @@ getTrending().then(data => {
     const movieOriginalTitle = modalEl.querySelector('.original-title');
     movieOriginalTitle.textContent = movieInfo.original_title;
     
-    const genres = genresGalleryFormatModal(movieInfo.genre_ids);
+
+    const genres = genresGalleryFormatModal(movieInfo.genres);
+
     const movieGenres = modalEl.querySelector('.genre');
     movieGenres.textContent = genres;
 
