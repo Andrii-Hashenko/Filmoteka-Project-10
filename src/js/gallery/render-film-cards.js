@@ -8,13 +8,16 @@ const modalEl = document.querySelector('.modal');
 const libraryWatchedHeaderBtn = document.querySelector('.header__link-library');
 const galleryfilm = document.getElementById('films-main');
 const libraryfilm = document.getElementById('films-library');
+
 const btnStorage = document.querySelector('.modal_buttons');
+
 
 let movieId = null;
 
 let watchedMoviesIds = setWatchedIds();
 
 let watchedMoviesInfo = [];
+
 
 
 getTrending().then(data => {
@@ -54,9 +57,7 @@ getTrending().then(data => {
     const movieOverview = modalEl.querySelector('.modal_description');
     movieOverview.textContent = movieInfo.overview;
 
-    // console.log(genresGalleryFormat(movieInfo.genre_ids));
-  }));
-});
+
 
 const backdrop = document.querySelector('.modal__backdrop');
 const closeBtn = document.querySelector('.modal__button');
@@ -71,6 +72,8 @@ function closeModal() {
 window.addEventListener('click', e => {
   if (e.target === backdrop) {
     closeModal();
+  } else {
+    return;
   }
 });
 
@@ -82,7 +85,9 @@ window.addEventListener('keydown', e => {
 
 /*Library*/
 
+
 btnStorage.addEventListener('click', addToStorage);
+
 
 function addToStorage(e) {
   const nameEvt = e.target.name;
@@ -163,12 +168,8 @@ function setWatchedIds () {
     return JSON.parse(localStorage.getItem('watched'));
   } else {
     return [];
+
   }
-}
-
-
-
-
 
 // import { getTrending } from '../api/api-service';
 // import { createGalleryMarkup } from '../gallery/galleryMarkupCards';

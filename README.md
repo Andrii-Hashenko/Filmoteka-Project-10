@@ -9,8 +9,6 @@ Team Lead: Andrii Hashenko (https://github.com/Andrii-Hashenko)
 Scrum master & Front-end developer: Iryna NebesnaIryna (https://github.com/NebesnaIryna)
  
 
-Front-end developer: Nikita (https://github.com/ArbalestARX7)
-
 Front-end developer: farfalina1908 (https://github.com/farfalina1908)
 
 Front-end developerr: MarioKarv (https://github.com/MarioKarv)

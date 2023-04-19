@@ -12,7 +12,7 @@ function onTeamModalShow() {
   document.addEventListener('keydown', onCloseEsc);
 
   function onClick(e) {
-    
+    console.log('123');
     e.target.classList.value === 'team__title' ||
     e.target.classList.value === 'team__title_accent' ||
     e.target.classList.value === 'basicLightbox'

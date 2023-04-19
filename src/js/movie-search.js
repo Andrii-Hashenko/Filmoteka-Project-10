@@ -1,7 +1,7 @@
-import { getTrending } from '.src/.js/.api-service';
-const searchForm = (document.querySelector('.header__search-form').innerHTML =
-  ' ');
+import { getTrending, fetchMovieSearcher } from './api/api-service';
+const searchForm = document.querySelector('.header__search-form');
 
+console.log(searchForm, 'search form');
 searchForm.addEventListener('submit', onSearchingMov);
 
 // //пошук фільмів
@@ -23,7 +23,15 @@ searchForm.addEventListener('submit', onSearchingMov);
 function onSearchingMov(event) {
   event.preventDefault();
   getTrending = event.target.firstElementChild.value;
-  if (event.target.firstElementChild.value === ' ') return;
+  if (event.target[0].value !== '') {
+    console.dir(event.target[0].value);
+
+    fetchMovieSearcher(event.target[0].value)
+      .then(console.log);
+
+    searchForm[0].value = '';
+    
+  };
 }
 //відображення фільмів
 // export function fetchMoviesKeywords(keywords) {
