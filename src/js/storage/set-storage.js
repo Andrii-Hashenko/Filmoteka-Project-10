@@ -18,6 +18,6 @@ export function addMovieToStorage(nameEvt, movieId) {
     storage.push(obj);
     return localStorage.setItem(KEY_STORAGE, JSON.stringify(storage));
   }
-  console.log(newElem);
-  Notify.info(`The movie already exist in ${KEY_STORAGE}`, { width: '280px' });
+  
+  Notify.info(`The movie already exist in ${KEY_STORAGE.toUpperCase()}`, { width: '280px' });
 }
