@@ -1,7 +1,7 @@
-import data from '../team-card.json';
+import data from '../../team-card.json';
 import * as basicLightbox from 'basiclightbox';
 import '../../node_modules/basiclightbox/src/styles/main.scss';
-import teamCardTpl from '../team-card.hbs';
+import teamCardTpl from '../../team-card.hbs';
 const teamLink = document.querySelector('.js-team-link');
 
 teamLink.addEventListener('click', onTeamModalShow);

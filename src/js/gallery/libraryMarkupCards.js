@@ -1,5 +1,5 @@
 import { genresLibraryFormat } from './formatGenres';
-import no_poster from '../images/no_poster.jpg';
+import no_poster from '../../images/no_poster/nothing.wp.webp';
 
 function createLibraryMarkup(films) {
   return films

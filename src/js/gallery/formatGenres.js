@@ -14,20 +14,11 @@ export function genresGalleryFormat(array) {
   }
 }
 
+
 export function genresGalleryFormatModal(arrOfGenres) {
   return arrOfGenres.map(genr => genr.name).join(', ');
 }
 
-// export function genresGalleryFormatModal(array) {
-//   const genreResult = genresList
-//     .filter(element => Array.isArray(array) && array.includes(element.id))
-//     .map(element => element.name);
-//   if (genreResult.length === 0) {
-//     return 'Unknown genre';
-//   } else {
-//     return genreResult.join(', ');
-//   }
-// }
 
 export function genresLibraryFormat(array) {
   const genreResult = array.map(genre => genre.name);
