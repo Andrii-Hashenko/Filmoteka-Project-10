@@ -26,21 +26,21 @@ function onSearchingMov(event) {
   if (event.target.firstElementChild.value === ' ') return;
 }
 //відображення фільмів
-function fetchMoviesKeywords(keywords: any): {
-  return keywords.hits
-    .map(({ SEARCH_URL, searchForm, language }) => {
-      return `
-      < div class="search-wrapper" >
-      <form class="${searchForm}" action="${SEARCH_URL}">
-        <div class="input-wrapper">
-          <input
-            class="header__input"
-            type="${language}"
-            name="${keywords.name}"
-            placeholder="Movie search"
-          /> 
-        </div>
-        </div>`;
-    })
-    .join('');
-}
+// export function fetchMoviesKeywords(keywords) {
+//   return keywords.hits
+//     .map(({ SEARCH_URL, searchForm, language }) => {
+//       return `
+//       < div class="search-wrapper" >
+//       <form class="${searchForm}" action="${SEARCH_URL}">
+//         <div class="input-wrapper">
+//           <input
+//             class="header__input"
+//             type="${language}"
+//             name="${keywords.name}"
+//             placeholder="Movie search"
+//           /> 
+//         </div>
+//         </div>`;
+//     })
+//     .join('');
+// }
