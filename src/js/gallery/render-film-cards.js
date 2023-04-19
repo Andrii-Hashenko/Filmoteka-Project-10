@@ -1,6 +1,6 @@
 import { getTrending } from '../api/api-service';
 import { createGalleryMarkup } from '../gallery/galleryMarkupCards';
-
+import { genresGalleryFormatModal } from './formatGenres';
 import { getMovieById } from '../api/api-service';
 
 const modalEl = document.querySelector('.modal');
@@ -19,6 +19,7 @@ let watchedMoviesInfo = [];
 
 console.log(watchedMoviesIds);
 
+
 getTrending().then(data => {
   galleryfilm.insertAdjacentHTML(
     'beforeend',
@@ -31,17 +32,57 @@ getTrending().then(data => {
   allCards.forEach(card => card.addEventListener('click', async () => {
     console.log(card.dataset.film);
     modalEl.style.display = 'block';
-
-
+    document.body.classList.add('stop-scrolling');
     movieId = card.dataset.film;
     const movieInfo = await getMovieById(movieId);
 
     const movieTitleContainer = modalEl.querySelector('.modal_title');
     movieTitleContainer.textContent = movieInfo.original_title;
+
+    modalEl.querySelector('.modal_image').src =
+      `https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`;
+    
+    const movieVote = modalEl.querySelector('.vote');
+    movieVote.textContent = `${movieInfo.vote_average} / ${movieInfo.vote_count}`;
+
+    const moviePopularity = modalEl.querySelector('.popularity');
+    moviePopularity.textContent = movieInfo.popularity;
+
+    const movieOriginalTitle = modalEl.querySelector('.original-title');
+    movieOriginalTitle.textContent = movieInfo.original_title;
+    
+    const genres = genresGalleryFormatModal(movieInfo.genre_ids);
+    const movieGenres = modalEl.querySelector('.genre');
+    movieGenres.textContent = genres;
+
+    const movieOverview = modalEl.querySelector('.modal_description');
+    movieOverview.textContent = movieInfo.overview;
+
+    // console.log(genresGalleryFormat(movieInfo.genre_ids));
   }));
 });
 
+const backdrop = document.querySelector('.modal__backdrop');
+const closeBtn = document.querySelector('.modal__button');
 
+closeBtn.addEventListener('click', closeModal);
+
+function closeModal() {
+  modalEl.style.display = 'none';
+  document.body.classList.remove('stop-scrolling');
+}
+
+window.addEventListener('click', e => {
+  if (e.target === backdrop) {
+    closeModal();
+  }
+});
+
+window.addEventListener('keydown', e => {
+  if (e.keyCode === 27) {
+    closeModal();
+  }
+});
 
 /*Library Watched*/
 
@@ -95,8 +136,28 @@ async function renderWatched () {
   
         const movieInfo = await getMovieById(movieId);
   
-        const movieTitleContainer = modalEl.querySelector('.modal_title');
-        movieTitleContainer.textContent = movieInfo.original_title;
+       const movieTitleContainer = modalEl.querySelector('.modal_title');
+       movieTitleContainer.textContent = movieInfo.original_title;
+
+       modalEl.querySelector(
+         '.modal_image'
+       ).src = `https://image.tmdb.org/t/p/w500/${movieInfo.poster_path}`;
+
+       const movieVote = modalEl.querySelector('.vote');
+       movieVote.textContent = `${movieInfo.vote_average} / ${movieInfo.vote_count}`;
+
+       const moviePopularity = modalEl.querySelector('.popularity');
+       moviePopularity.textContent = movieInfo.popularity;
+
+       const movieOriginalTitle = modalEl.querySelector('.original-title');
+       movieOriginalTitle.textContent = movieInfo.original_title;
+
+       const genres = genresGalleryFormatModal(movieInfo.genre_ids);
+       const movieGenres = modalEl.querySelector('.genre');
+       movieGenres.textContent = genres;
+
+       const movieOverview = modalEl.querySelector('.modal_description');
+       movieOverview.textContent = movieInfo.overview;
       }))
     } else {
       libraryfilm.innerHTML = '<h2> No movies watched </h2> ';
