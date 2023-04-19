@@ -4,8 +4,8 @@ const refs = {
   headerEl: document.querySelector('.header'),
   searchEl: document.querySelector('.header__search-form'),
   btnsEl: document.querySelector('.header__user-links-wrapper'),
-  watchedEl: document.querySelector('.js-watched'),
-  queueEl: document.querySelector('.js-queue'),
+  libraryWatchedHeaderBtn: document.querySelector('.js-watched'),
+  libraryQueueHeaderBtn: document.querySelector('.js-queue'),
   galleryfilm: document.querySelector('#films-main'),
   libraryfilm: document.querySelector('#films-library'),
 };
