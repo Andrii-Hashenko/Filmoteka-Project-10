@@ -1,39 +1,87 @@
-
-<header class="header js-home-bgi">
+<header class="header">
   <div class="container">
-    <div class="header-wrapper js-home-bgi">
-  <div class="header-nav">
-    <div class="search-wrapper">
-      <form class="header__search-form js-show" action="GET">
-        <div class="input-wrapper">
+    <div class="nav_section">
+      <div class="search-wrap">
+        <form id="search-form" class="search-form">
           <input
-            class="header__input"
+            autocomplete="off"
+            class="search_input"
             type="text"
-            name="query"
-            placeholder="Movie search"
+            placeholder="Search a movie"
+            name="searchQuery"
+            data-key="search"
           />
-          <button class="header__btn" type="submit" aria-label="search">
-            <svg class="header__search-logo" width="16" height="16">
-              <use href="./images/icons/symbol-defs.svg#icon-search"></use>
-            </svg>
-          </button>
-        </div>
-      </form>
-      <div class="header__links-wrapper js-hide">
-        <a class="header__link-home header__link-home--current" href="index.html">HOME</a>
-        <a class="header__link-library" href="library.html">MY LIBRARY</a>
+          <svg class="search_button-icon" width="12" height="12">
+            <use href="./images/sprite.svg#icon-search"></use>
+          </svg>
+        </form>
+        <ul class="search-list is-hidden"></ul>
       </div>
+      <nav class="navigation">
+        <ul class="menu list">
+          <li class="menu_item">
+            <a
+              href=""
+              class="menu_link home-link link current"
+              data-key="home"
+              >Home</a
+            >
+          </li>
+          <li class="menu_item_slide position">
+            <a
+              href=""
+              class="menu_link library-link link"
+              data-key="my-library"
+              >MY LIBRARY</a
+            >
+          </li>
+          <li class="menu_item">
+            <div class="auth-container">
+              <a
+                type="button"
+                class="signin-btn"
+                id="openSignInModalBtn"
+                data-key="log-in"
+                >Log in</a
+              >
+              <a
+                type="button"
+                class="sigout-btn"
+                id="logoutBtn"
+                data-key="log-out"
+                >Log out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <a href="./index.html" class="logo-header link">
+      <svg class="logo_svg" width="24" height="24">
+        <use href="./images/sprite.svg#icon-film"></use>
+      </svg>
+      <span class="logo_text">Filmoteka</span>
+    </a>
+
+    <div class="btn-section is-hidden">
+      <button class="btn btn-watched" data-key="watched">Watched</button>
+      <button class="btn btn-queue" data-key="queue">Queue</button>
+    </div>
+    <div class="switcher-lang-userDetails-container">
+      <div class="theme-lang-switcher">
+        <div class="swicher switcher-item">
+          <a href="#" class="themetoggle">
+            <span class="material-icons-outlined"> nightlight_round </span>
+          </a>
+        </div>
+        <select name="" id="" data-switcher class="switcher-item lang">
+          <option value="en-US" class="option-value">EN</option>
+          <option value="uk-UA" class="option-value">UA</option>
+          <option value="ru-RU" class="option-value">RU</option>
+        </select>
+      </div>
+      <div id="userDetails"></div>
     </div>
   </div>
-  <div class="logo-wrapper-home">
-    <a href="index.html">
-      <svg class="header__logo" width="59" height="59">
-        <use href="./images/icons/symbol-defs.svg#icon-logo"></use>
-      </svg>
-    </a>
-    <a class="header__link-filmoteka" href="index.html">Filmoteka</a>
-  </div>
-</div>
-</div>
 </header>
-

@@ -1,40 +1,6 @@
-// Переменные для шрифтов
-$font-family: 'Roboto' sans-serif;
-$font-style: normal;
-$font-weight: 500;
-$font-size: 12px;
-$line-height: calc(16 / 12);
-
-// Текст в шапке и на акцентных элементах
-$white-text-color: #ffffff;
-
-// Основной цвет текста
 $primary-text-color: #000000;
-
-// Цвет текста хедера
-$header-color: #545454;
-
-// Фон для Хедера 
-$secondary-background-color: #F0F0F0;
-
-// Фон для ФУТЕРА и стрелок переключения страниц
-$footer-bg-color:  #f7f7f7;
-
-// Выделение текста, пагинация, сердечко в футере
-$accent-color: #B92F2C;
-
-// // Ховер кнопок и рейтинг фильмов в карточках
-// $hover-rating-color: ;
-
-// // Детали о фильме
-// $detalis-film-color: ;
-
-// // Текст нотификашки
-// $notify-text-color: ;
-
-// Переходы и анимация
-$transition-duration: 250ms;
-$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-// // Тень кнопок
-// $button-header-library: ;
+$secondary-text-color: #B92F2C;
+$white-text-color: #FFFFFF;
+$footer-grey-text-color: #545454;
+$modal-grey-text-color: #8C8C8C;
+$footer-background-color:#f7f7f7;

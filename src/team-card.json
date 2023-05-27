@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Andrii Hashenko",
-    "description": "Team Lead",
+    "description": "Team Lead and developer",
     "image": "",
     "github": "https://github.com/Andrii-Hashenko",
     "linkdIn": "https://www.linkedin.com/in/andrii-hashenko-513492aa/",
@@ -10,8 +10,8 @@
   },
   {
     "id": "2",
-    "name": "Iryna NebesnaIryna",
-    "description": "Scrum Master",
+    "name": "Ірина Небесна",
+    "description": "Scrum Master and developer",
     "image": "",
     "github": "https://github.com/NebesnaIryna",
     "linkdIn": "",
@@ -19,7 +19,7 @@
   },
   {
     "id": "3",
-    "name": "SerhiiShymko",
+    "name": "Сергій Шимко",
     "description": "Developer",
     "image": "",
     "github": "https://github.com/SerhiiShymko",
@@ -28,7 +28,7 @@
   },
   {
     "id": "4",
-    "name": "Sergiy Kushnir",
+    "name": "Сергій Кушнір",
     "description": "Developer",
     "image": "",
     "github": "https://github.com/Sergiy5",
@@ -37,7 +37,7 @@
   },
   {
     "id": "5",
-    "name": "OlenkaPasko",
+    "name": "Олена Березіна",
     "description": "Developer",
     "image": "",
     "github": "ttps://github.com/OlenkaPasko",
@@ -46,7 +46,7 @@
   },
   {
     "id": "6",
-    "name": "MarioKarv",
+    "name": "Мар’ян Кравець",
     "description": "Developer",
     "image": "",
     "github": "https://github.com/MarioKarv",
@@ -55,7 +55,7 @@
   },
   {
     "id": "7",
-    "name": "farfalina1908",
+    "name": "Олена Нечипоренко",
     "description": "Developer",
     "image": "",
     "github": "https://github.com/farfalina1908",

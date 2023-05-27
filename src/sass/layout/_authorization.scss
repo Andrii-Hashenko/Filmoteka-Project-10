@@ -1,0 +1,219 @@
+.modal-auth-container {
+  background-color: #ffffff;
+  position: relative;
+  display: grid;
+  padding: 20px;
+  margin-right: 15px;
+  margin-left: 15px;
+  width: 290px;
+  @media screen and (min-width: 768px) {
+    width: 400px;
+    padding: 40px;
+  }
+}
+.modal-auth-header {
+  display: flex;
+}
+.auth-container-title {
+  @include font($font-size: 25px);
+  padding-bottom: 20px;
+}
+
+.login-signup-container {
+  border-bottom: 1px solid $modal-grey-text-color;
+  display: flex;
+  align-items: baseline;
+}
+
+#close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  background-color: transparent;
+  fill: $modal-grey-text-color;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    fill: $secondary-text-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.auth-container-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.email-input,
+.passw-input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid $modal-grey-text-color;
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: $secondary-text-color;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.login-btn {
+  height: 45px;
+  color: $white-text-color;
+  background-color: $secondary-text-color;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    outline: none;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  &:active {
+    transform: translate(0em, 0.25em);
+  }
+}
+
+.auth-google-text {
+  color: $modal-grey-text-color;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 35px;
+}
+
+.social-login-btn {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid $modal-grey-text-color;
+  padding: 7px 19px;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    padding: 10px 30px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.social-items:not(:last-child) {
+  margin-right: 25px;
+}
+
+.fb-btn {
+  fill: #FFFFFF;
+  background-color: #9e20b5;
+}
+
+.sign-up {
+  margin-top: 25px;
+}
+
+.sign-up-btn {
+ 
+  margin-left: 25px;
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+
+.login-up-btn {
+  
+  color: $secondary-text-color;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#openSignUpModalBtn {
+  height: 35px;
+}
+
+#sign-email {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+#sign-password {
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.user-img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.signin-btn,
+.sigout-btn {
+  @include font($line-height: 16px);
+  text-transform: uppercase;
+  width: max-content;
+  cursor: pointer;
+}
+
+#userDetails {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-name {
+  @include font($line-height: 16px);
+  text-transform: uppercase;
+}
+
+.user-email {
+  @include font($line-height: 16px);
+}
+
+#alreadyHaveAccount {
+  height: 35px;
+}
+
+.switcher-lang-userDetails-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}

@@ -1,0 +1,119 @@
+.gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.movie-card {
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+
+  position: relative;
+  text-decoration: none;
+  $primary-text-color: #212121;
+  min-width: 280px;
+  min-height: 443px;
+  margin: 15px;
+  border-radius: 5px;
+
+  flex-basis: calc((100% - 2 * 15px) / 1);
+
+  @media screen and (min-width: 768px) {
+    min-width: 293px;
+    min-height: 440px;
+    flex-basis: calc((100% - 4 * 15px) / 2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 274px;
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+}
+
+.movie-poster-wrapper {
+  position: relative;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+.movie-card-img {
+  width: 100%;
+  max-height: 402px;
+  @media screen and(min-width: 768px) {
+    min-height: 398px;
+  }
+}
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 5px;
+  @include font($line-height: 16px);
+}
+.movie-title {
+  color: $primary-text-color;
+  @include font($line-height: 16px);
+}
+.movie-genres-year-wrapper {
+  display: flex;
+}
+.movie-year-wrapper {
+  position: relative;
+}
+.movie-genres,
+.movie-years {
+  color: $secondary-text-color;
+}
+.movie-years {
+  margin-left: 10px;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    display: block;
+    height: 90%;
+    width: 1px;
+    background-color: $secondary-text-color;
+  }
+}
+.movie-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  transition: 500ms linear;
+  &:hover,
+  &:focus {
+    transform: scale(1.08);
+    transform-origin: center;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+}
+
+.movie-rating-wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  width: 50px;
+  height: 25px;
+  background-color: #B92F2C;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(100% 0%, 90% 50%, 100% 100%, 25% 100%, 10% 50%, 25% 0%);
+}
+
+.string {
+  cursor: pointer;
+  box-shadow: -13px -1px 5px 4px rgb(255, 255, 255, 76%);
+}

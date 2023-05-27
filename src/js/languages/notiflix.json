@@ -1,0 +1,77 @@
+{
+  "apifilms": {
+    "failure": {
+      "en": "Ooops, nothing was found",
+      "ua": "Йой, нічого не знайдено",
+      "ru": "не-а, давай ещё раз"
+    }
+  },
+  "watched": {
+    "failure": {
+      "en": "Film removed from watched",
+      "ua": "Фільм видалено з переглянутих",
+      "ru": "Фильм удалён из просмотренных"
+    },
+    "success": {
+      "en": "Film added to watched",
+      "ua": "Фільм додано до переглянутих",
+      "ru": "Фильм добавлен к просмотренным"
+    }
+  },
+  "queue": {
+    "failure": {
+      "en": "Film removed from queue",
+      "ua": "Фільм видалено з обраних",
+      "ru": "Фильм удалён из избранных"
+    },
+    "success": {
+      "en": "Film added to queue",
+      "ua": "Фільм додано до обраних",
+      "ru": "Фильм добавлен к избранным"
+    }
+  },
+  "auth": {
+    "failure": {
+      "en": "Oops, something went wrong!",
+      "ua": "Щось пішло не так",
+      "ru": "Не сработало"
+    },
+    "created": {
+      "en": "User created",
+      "ua": "Користувача створено",
+      "ru": "Пользователь создан"
+    },
+    "login": {
+      "en": "User logged",
+      "ua": "Користувача авторизовано",
+      "ru": "Пользователь авторизирован"
+    },
+    "loginFail": {
+      "en": "Wrong username or password",
+      "ua": "Невірне ім'я або пароль",
+      "ru": "Неправильное имя или пароль"
+    },
+    "logout": {
+      "en": "User logged out",
+      "ua": "Користувач вийшов",
+      "ru": "Пользователь вышел"
+    },
+    "logwith": {
+      "google": {
+        "en": "User logged in with Google",
+        "ua": "Користувач авторизувався через Google",
+        "ru": "Пользователь авторизировался через Google"
+      },
+      "facebook": {
+        "en": "User logged in with Facebook",
+        "ua": "Користувач авторизувався через Facebook",
+        "ru": "Пользователь авторизировался через Facebook"
+      },
+      "github": {
+        "en": "User logged in with Github",
+        "ua": "Користувач авторизувався через Github",
+        "ru": "Пользователь авторизировался через Github"
+      }
+    }
+  }
+}

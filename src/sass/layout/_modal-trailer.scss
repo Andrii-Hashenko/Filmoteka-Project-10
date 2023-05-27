@@ -1,0 +1,20 @@
+.modal-trailer-close-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    cursor: pointer;
+    & svg {
+        position: absolute;
+        top: -2px;
+        left: -2px;
+    }
+}
+.modal {
+    position: relative;
+
+    & iframe {
+        max-width: 100%;
+    }
+}
